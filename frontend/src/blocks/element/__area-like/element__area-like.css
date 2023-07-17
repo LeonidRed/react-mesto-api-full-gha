@@ -1,0 +1,21 @@
+.element__area-like {
+  background-image: url(../../../images/like.svg);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  padding: 0;
+  width: 22px;
+  height: 19px;
+}
+
+.element__area-like:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.element__area-like:active {
+  background-image: url(../../../images/like_active.svg);
+}

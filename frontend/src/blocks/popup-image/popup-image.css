@@ -1,0 +1,12 @@
+.popup-image {
+  background-color: rgba(0, 0, 0, 0.9);
+  grid-template-columns: max-content 32px;
+  grid-template-rows: 32px max-content;
+}
+
+@media screen and (max-width: 750px) {
+  .popup-image {
+    grid-template-columns: max-content;
+    grid-template-rows: 20px max-content;
+  }
+}

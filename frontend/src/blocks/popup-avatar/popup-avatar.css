@@ -1,0 +1,9 @@
+.popup-avatar {
+  grid-template-rows: 32px 272px;
+}
+
+@media screen and (max-width: 750px) {
+  .popup-avatar {
+    grid-template-rows: 20px 220px;
+  }
+}

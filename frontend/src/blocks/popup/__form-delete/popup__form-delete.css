@@ -1,0 +1,15 @@
+.popup__form-delete {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 34px 36px 34px;
+  gap: 34px;
+}
+
+@media screen and (max-width: 750px) {
+  .popup__form-delete {
+    justify-content: center;
+    padding: 32px 22px;
+    gap: 24px;
+  }
+}

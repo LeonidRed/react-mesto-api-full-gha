@@ -1,0 +1,17 @@
+.profile {
+  display: grid;
+  grid-template-columns: 120px minmax(max-content, 1fr) 1fr 150px;
+  align-items: center;
+}
+
+@media screen and (max-width: 750px) {
+  .profile {
+    grid-template-columns: 235px 47px;
+    grid-template-areas:
+    "avatar avatar"
+    "info edit"
+    "add add";
+    justify-content: center;
+    justify-items: center;
+  }
+}

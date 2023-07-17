@@ -1,0 +1,14 @@
+.profile__avatar {
+  background-image: url('../../../images/pen.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 750px) {
+  .profile__avatar {
+    grid-area: avatar;
+  }
+}

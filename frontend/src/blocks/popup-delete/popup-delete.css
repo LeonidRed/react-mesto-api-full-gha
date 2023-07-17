@@ -1,0 +1,9 @@
+.popup-delete {
+  grid-template-rows: 32px 181px;
+}
+
+@media screen and (max-width: 750px) {
+  .popup-delete {
+    grid-template-rows: 20px 160px;
+  }
+}

@@ -1,0 +1,29 @@
+.popup__button-delete {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  border-radius: 2px;
+  background-color: transparent;
+  padding: 0;
+  color: #fff;
+  min-height: 50px;
+  overflow: hidden;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+@media screen and (max-width: 750px) {
+  .popup__button-delete-submit {
+    font-size: 14px;
+    line-height: 17px;
+    min-height: 46px;
+  }
+}
+
+.popup__button-delete-submit:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
