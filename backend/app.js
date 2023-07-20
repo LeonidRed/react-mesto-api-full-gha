@@ -1,10 +1,11 @@
 require('dotenv').config()
-const cors = require('cors')
+// const cors = require('cors')
 const helmet = require('helmet')
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const { errors } = require('celebrate')
+const cors = require('./middlewares/cors')
 const userRoutes = require('./routes/users')
 const cardRoutes = require('./routes/cards')
 const {
@@ -26,14 +27,16 @@ mongoose.connect(DB_URL, {
 
 const app = express()
 
-app.use(cors({
-  origin: 'http://localhost:3002',
-}))
+// app.use(cors({
+//   origin: 'http://localhost:3002',
+// }))
 app.use(helmet())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(requestLogger)
+
+app.use(cors)
 
 app.get('/crash-test', () => {
   setTimeout(() => {
