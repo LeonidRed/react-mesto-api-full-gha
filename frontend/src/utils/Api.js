@@ -74,7 +74,7 @@ class Api {
 
 
 const api = new Api({
-  baseUrl: 'http://api.imesto.nomoredomains.xyz',
+  baseUrl: 'https://api.imesto.nomoredomains.xyz',
   headers: {
     authorization: `Bearer ${localStorage.getItem('token')}`,
     'Content-Type': 'application/json',

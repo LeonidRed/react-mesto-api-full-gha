@@ -1,5 +1,4 @@
 require('dotenv').config()
-// const cors = require('cors')
 const helmet = require('helmet')
 const express = require('express')
 const mongoose = require('mongoose')
@@ -27,9 +26,6 @@ mongoose.connect(DB_URL, {
 
 const app = express()
 
-// app.use(cors({
-//   origin: 'http://localhost:3002',
-// }))
 app.use(helmet())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
