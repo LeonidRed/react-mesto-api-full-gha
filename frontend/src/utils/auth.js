@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://imesto.nomoredomains.xyz'
+export const BASE_URL = 'http://api.imesto.nomoredomains.xyz'
 
 function checkResponse(res) {
   if (res.ok) {
