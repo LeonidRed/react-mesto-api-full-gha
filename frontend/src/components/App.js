@@ -34,6 +34,7 @@ function App() {
   const [tooltipImage, setTooltipImage] = React.useState('')
   const [tooltipText, setTooltipText] = React.useState('')
 
+  console.log('isLogged start ', isLogged);
 
   React.useEffect(() => {
     isLogged &&

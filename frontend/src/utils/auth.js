@@ -1,4 +1,5 @@
 export const BASE_URL = 'https://api.imesto.nomoredomains.xyz'
+// export const BASE_URL = 'http://localhost:3000'
 
 function checkResponse(res) {
   if (res.ok) {
@@ -18,11 +19,11 @@ export const register = (email, password) => {
     .then(checkResponse)
 }
 
-export const authorize = (email, password) => {
+export const authorize = (email, password, token) => {
   return fetch(`${BASE_URL}/signin`, {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({ email, password })
   })
@@ -30,6 +31,7 @@ export const authorize = (email, password) => {
 }
 
 export const checkToken = (token) => {
+  console.log('token in auth ', token);
   return fetch(`${BASE_URL}/users/me`, {
     method: 'GET',
     headers: {

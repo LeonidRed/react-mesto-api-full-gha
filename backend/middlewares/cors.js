@@ -3,6 +3,10 @@ const allowedCors = [
   'https://imesto.nomoredomains.xyz',
   'http://imesto.nomoredomains.xyz',
   'localhost:3000',
+  // 'http://localhost:3000',
+  // 'http://localhost:3002',
+  // 'localhost:3001',
+  // 'localhost:3002',
 ]
 
 // eslint-disable-next-line consistent-return

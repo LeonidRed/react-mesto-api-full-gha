@@ -14,7 +14,11 @@ class Api {
   getUserInfo() {
     return fetch(`${this._url}/users/me`, {
       method: "GET",
-      headers: this._headers
+      // headers: this._headers
+      headers: {
+        authorization: `Bearer ${localStorage.getItem('token')}`,
+        'Content-Type': 'application/json',
+      }
     })
       .then(this._checkResponse)
   }
@@ -22,7 +26,11 @@ class Api {
   getInitialCards() {
     return fetch(`${this._url}/cards`, {
       method: "GET",
-      headers: this._headers
+      // headers: this._headers
+      headers: {
+        authorization: `Bearer ${localStorage.getItem('token')}`,
+        'Content-Type': 'application/json',
+      }
     })
       .then(this._checkResponse)
   }
@@ -39,7 +47,11 @@ class Api {
   addCard(values) {
     return fetch(`${this._url}/cards`, {
       method: "POST",
-      headers: this._headers,
+      // headers: this._headers,
+      headers: {
+        authorization: `Bearer ${localStorage.getItem('token')}`,
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify({ name: values.name, link: values.link })
     })
       .then(this._checkResponse)
@@ -48,7 +60,11 @@ class Api {
   deleteCard(id) {
     return fetch(`${this._url}/cards/${id}`, {
       method: "DELETE",
-      headers: this._headers
+      // headers: this._headers
+      headers: {
+        authorization: `Bearer ${localStorage.getItem('token')}`,
+        'Content-Type': 'application/json',
+      }
     })
       .then(this._checkResponse)
   }
@@ -56,7 +72,11 @@ class Api {
   changeLikeCardStatus(id, like) {
     return fetch(`${this._url}/cards/${id}/likes`, {
       method: like ? "PUT" : "DELETE",
-      headers: this._headers
+      // headers: this._headers
+      headers: {
+        authorization: `Bearer ${localStorage.getItem('token')}`,
+        'Content-Type': 'application/json',
+      }
     })
       .then(this._checkResponse)
   }
@@ -64,7 +84,11 @@ class Api {
   changeAvatar(value) {
     return fetch(`${this._url}/users/me/avatar`, {
       method: "PATCH",
-      headers: this._headers,
+      // headers: this._headers,
+      headers: {
+        authorization: `Bearer ${localStorage.getItem('token')}`,
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify({ avatar: value.avatar })
     })
       .then(this._checkResponse)
@@ -74,11 +98,12 @@ class Api {
 
 
 const api = new Api({
-  baseUrl: 'https://api.imesto.nomoredomains.xyz',
-  headers: {
-    authorization: `Bearer ${localStorage.getItem('token')}`,
-    'Content-Type': 'application/json',
-  }
+  baseUrl: 'https://api.imesto.nomoredomains.xyz'
+  // baseUrl: 'http://localhost:3000',
+  // headers: {
+  //   authorization: `Bearer ${localStorage.getItem('token')}`,
+  //   'Content-Type': 'application/json',
+  // }
 })
 
 export { api }
